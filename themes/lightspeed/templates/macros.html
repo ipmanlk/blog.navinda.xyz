@@ -1,0 +1,11 @@
+{% macro page_in_list(page) %}
+  <li>
+    <span>
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      ·
+      <small>{{ page.reading_time }}
+        min read</small>
+    </span>
+    <time style="font-size:90%;" datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+  </li>
+{% endmacro page_in_list %}
